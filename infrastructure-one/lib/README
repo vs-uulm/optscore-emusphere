@@ -1,0 +1,15 @@
+OpenNebula Cloud API (OCA) Files can be found at: 
+	https://downloads.opennebula.io/packages/
+	
+However (!), 5.12.0.3 did not work, so building them from scratch is the better option:
+	(1) git clone https://github.com/OpenNebula/one.git
+	(2) ensure the dependencies are available at /usr/share/java or change LIB folder in build script
+	(3) ./one/src/oca/java/build -p
+	
+You can also use the pre-built files from the lib/java-oca-5.12 directory
+
+Install to local Maven repository using:
+	mvn install:install-file -Dfile=java-oca-5.12/jar/org.opennebula.client.jar -DgroupId=org.opennebula -DartifactId=client -Dversion=5.12 -Dpackaging=jar
+	
+Attach sources to build path:
+	Open build path, go to library, attach source <workspace>/infrastructure-one/lib/java-oca-5.12.0.3/doc

@@ -1,0 +1,5 @@
+Unofficial updates to ganymed-ssh-2 can be found at: 
+	https://github.com/SoftwareAG/ganymed-ssh-2
+
+Install to local Maven repository using:
+	mvn install:install-file -Dfile=ganymed-ssh2-263.jar -DgroupId=ch.ethz.ganymed -DartifactId=ganymed-ssh2 -Dversion=263 -Dpackaging=jar
